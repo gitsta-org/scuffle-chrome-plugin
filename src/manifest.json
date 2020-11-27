@@ -17,7 +17,8 @@
     "css": ["content.styles.css"]
   }],
   "permissions": [
-    "contextMenus"
+    "contextMenus",
+    "activeTab"
   ],
   "web_accessible_resources": [
     "content.styles.css",

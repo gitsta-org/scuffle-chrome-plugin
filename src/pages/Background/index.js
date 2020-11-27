@@ -16,9 +16,13 @@ chrome.contextMenus.create({
   contexts: ['selection'],
 });
 
-chrome.contextMenus.create({
-  title: 'Add a note',
-  parentId: 'scuffle',
-  id: 'note',
-  contexts: ['selection'],
+console.log('hi');
+
+chrome.contextMenus.onClicked.addListener(function (info, tabs) {
+  if (info.menuItemId === 'bookmark') {
+    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+      var activeTab = tabs[0];
+      chrome.tabs.sendMessage(activeTab.id, { message: 'create-bookmark' });
+    });
+  }
 });
