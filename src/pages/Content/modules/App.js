@@ -2,19 +2,17 @@
 
 import React, { Component } from 'react';
 // import logo from './logo.svg';
+import Bookmark from './bookmark';
 
 class App extends Component {
+  debugger;
   render() {
     return (
       <div className="App">
-        <header className="App-header"></header>
-        {this.props.window.url}
-        <p className="App-intro">Bookmark url: {this.props.document.URL}</p>
-        <p>name: {this.props.document.title}</p>
+        <Bookmark document={this.props.document} window={this.props.window}/>
       </div>
     );
   }
 }
 
 export default App;
-

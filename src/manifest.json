@@ -2,6 +2,7 @@
   "name": "Scuffle chrome plugin",
   "options_page": "options.html",
   "background": {
+    "persistent": false,
     "page": "background.html"
   },
   "browser_action": {
